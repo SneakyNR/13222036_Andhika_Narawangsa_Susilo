@@ -1,0 +1,10 @@
+Partikel 1 | Posisi: (1, 2) | Jarak: 2.23607
+Partikel 2 | Posisi: (3.5, 4.2) | Jarak: 5.46717
+Partikel 3 | Posisi: (-2.1, 5) | Jarak: 5.4231
+Partikel 4 | Posisi: (0, -3.3) | Jarak: 3.3
+Partikel 5 | Posisi: (6.7, -1.4) | Jarak: 6.84471
+Partikel 6 | Posisi: (-4.5, -2.2) | Jarak: 5.00899
+Partikel 7 | Posisi: (2.3, 3.3) | Jarak: 4.02244
+Partikel 8 | Posisi: (-1, 0.5) | Jarak: 1.11803
+Partikel 9 | Posisi: (4.4, -4.4) | Jarak: 6.22254
+Partikel 10 | Posisi: (0.8, 1.2) | Jarak: 1.44222
