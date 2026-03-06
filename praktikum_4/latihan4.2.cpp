@@ -13,19 +13,19 @@ private:
     double jarak_pusat;
 
 public:
-    // Constructor
     Partikel(double pos_x, double pos_y) {
         x = pos_x;
         y = pos_y;
         jarak_pusat = 0.0;
     }
 
-    // Fungsi hitung jarak
+    // Jarak terhadap titik acuan (5.0, 5.0)
     void hitungJarak() {
-        jarak_pusat = std::sqrt((x * x) + (y * y));
+        double ref_x = 5.0;
+        double ref_y = 5.0;
+        jarak_pusat = std::sqrt((x - ref_x) * (x - ref_x) + (y - ref_y) * (y - ref_y));
     }
 
-    // Getter (fungsi untuk membaca data private)
     double getX() const {
         return x;
     }
@@ -41,7 +41,6 @@ public:
 
 int main() {
 
-    // A. FASE I/O BACA
     std::vector<Partikel> kumpulan_partikel;
     std::ifstream fileBaca("koordinat_mentah.txt");
 
@@ -50,7 +49,7 @@ int main() {
 
     if (fileBaca.is_open()) {
 
-        fileBaca >> header1 >> header2; // Lewati header
+        fileBaca >> header1 >> header2;
 
         while (fileBaca >> temp_x >> temp_y) {
             kumpulan_partikel.push_back(Partikel(temp_x, temp_y));
@@ -62,12 +61,10 @@ int main() {
         return 1;
     }
 
-    // B. FASE KOMPUTASI
     for (size_t i = 0; i < kumpulan_partikel.size(); i++) {
         kumpulan_partikel[i].hitungJarak();
     }
 
-    // C. FASE I/O TULIS
     std::ofstream fileHasil("hasil_jarak.txt");
 
     if (fileHasil.is_open()) {

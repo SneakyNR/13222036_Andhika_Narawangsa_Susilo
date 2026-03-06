@@ -30,9 +30,16 @@ int main() {
     mobil2.warna = "Hitam";  
     mobil2.tahun = 2020;
 
+    // Membuat Object 3 (mobil impian)
+    Mobil mobil3;
+    mobil3.merk = "Ferrari";
+    mobil3.warna = "Merah";
+    mobil3.tahun = 2024;
+
     // Memanggil perilaku dari masing-masing object
     mobil1.nyalakanMesin();  
     mobil2.nyalakanMesin();
+    mobil3.nyalakanMesin();
 
     return 0;  
 }

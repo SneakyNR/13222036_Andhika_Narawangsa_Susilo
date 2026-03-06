@@ -8,7 +8,7 @@ private:
     double x, y;
 
 public:  
-    // Constructor (Dipanggil otomatis saat objek dibuat)  
+    // Constructor
     Titik2D(double nilai_x, double nilai_y) {   
         x = nilai_x;  
         y = nilai_y;  
@@ -20,8 +20,8 @@ public:
 };
 
 int main() {  
-    // Objek dibuat sekaligus diberi nilai awal via Constructor  
-    Titik2D titikA(10.5, 20.2);   
+    // Objek dibuat tanpa argumen
+    Titik2D titikA;   
     titikA.cetak();  
       
     return 0;  

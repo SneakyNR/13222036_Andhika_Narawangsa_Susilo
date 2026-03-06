@@ -12,7 +12,6 @@ private:
     double hasil;
 
 public:  
-    // Constructor menginisialisasi angka yang akan dihitung  
     TugasKalkulasi(int id, double a, double b) {  
         id_tugas = id;  
         nilai_A = a;  
@@ -20,7 +19,6 @@ public:
         hasil = 0.0;  
     }
 
-    // Method komputasi (Di sinilah proses paralel nantinya bekerja)  
     void kerjakan() {  
         hasil = nilai_A + nilai_B;
     }
@@ -35,12 +33,11 @@ public:
 int main() {  
     std::vector<TugasKalkulasi> antrean;
 
-    // Memasukkan antrean tugas dengan data yang berbeda-beda  
-    antrean.push_back(TugasKalkulasi(1, 10.5, 5.0));  
-    antrean.push_back(TugasKalkulasi(2, 20.0, 7.5));  
-    antrean.push_back(TugasKalkulasi(3, 50.2, 10.1));
+    // Membuat 100 tugas kalkulasi secara otomatis
+    for(int i = 1; i <= 100; i++) {
+        antrean.push_back(TugasKalkulasi(i, i * 2.5, i * 1.5));
+    }
 
-    // Proses massal (Sangat aman untuk diparalelkan)  
     for(int i = 0; i < antrean.size(); i++) {  
         antrean[i].kerjakan();  
         antrean[i].tampilkanHasil();  

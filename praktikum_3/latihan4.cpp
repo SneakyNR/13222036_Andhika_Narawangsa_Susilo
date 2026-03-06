@@ -12,7 +12,7 @@ public:
     // Constructor  
     Sensor(int id_sensor) {   
         id = id_sensor;   
-        nilai = 0.0;   
+        // nilai = 0.0;  // dihapus
     }  
       
     void rekam(double data) {   
@@ -29,10 +29,9 @@ int main() {
     Sensor jaringan[3] = { Sensor(101), Sensor(102), Sensor(103) };
 
     // Batch processing
-    for (int i = 0; i < 3; i++) {  
-        // Simulasi input data yang berbeda untuk tiap sensor  
-        jaringan[i].rekam((i + 1) * 12.5);  
-    }  
+    // for (int i = 0; i < 3; i++) {  
+    //     jaringan[i].rekam((i + 1) * 12.5);  
+    // }  
       
     // Output hasil  
     for (int i = 0; i < 3; i++) {  
